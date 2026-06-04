@@ -6,6 +6,24 @@ const App = () => {
   const handleReset = () => {
     setCount(0);
   };
+  const increment = () => {
+     if(count < 20){
+      setCount(count + 1);
+     }
+     else{
+      alert("Counter cannot exceed 20");
+     }
+  };
+  
+  const decrement = () => {
+    if(count > 0){
+      setCount(count - 1);
+    }
+    else{
+      alert("Counter cannot go below 0");
+    }
+  };
+
 
   return (
     <div className="container">
@@ -15,13 +33,13 @@ const App = () => {
       <div className="button-container">
         <button 
           className="btn btn-increment" 
-          onClick={() => setCount(count + 1)}
+          onClick={increment}
         >
           Increment
         </button>
         <button 
           className="btn btn-decrement" 
-          onClick={() => setCount(count - 1)}
+          onClick={decrement}
         >
           Decrement
         </button>

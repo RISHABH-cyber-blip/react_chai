@@ -33,7 +33,7 @@ const App = () => {
       <div className="button-container">
         <button 
           className="btn btn-increment" 
-          onClick={increment}
+          onClick={setCount()}
         >
           Increment
         </button>

@@ -44,8 +44,6 @@ const App = () => {
                                 onCurrencyChange={currency => setFromCurrency(currency)}
                                 currencyOption={options}
                                 selectedCurrency={fromCurrency}
-                                onamountChange={setAmount}
-                                
                             />
                         </div>
                         <div className="relative w-full h-0.5">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useId} from 'react'
 
 
 function InputBox({
@@ -13,15 +13,16 @@ function InputBox({
     
     className = "",
 }) {
-   
+   const amountId = useId()
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex `}>
             <div className="w-1/2">
-                <label  className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountId} className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
+                    id={amountId}
                     disabled={amountDisabled}
                     value={amount}
                     onChange={(e) => onamountChange && onamountChange(Number(e.target.value))}

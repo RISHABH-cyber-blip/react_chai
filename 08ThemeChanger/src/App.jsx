@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { ThemeProvider } from './Context/Theme'
 import Card from './Compnents/Card'
-import ThemeBtn from './Compnents/Themebtn'
+import ThemeBtn from './Compnents/ThemeBtn'
 import { useEffect } from 'react'
 
 const App = () => {

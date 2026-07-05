@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import { ToDoProvider } from './contexts'
-import TodoItem from './components/ToDoItem'
+import { ToDoForm, ToDoItem } from './components/Index'
 
 const App = () => {
   const [todos, setTodos] = useState([])
   
-  const addTodo = (todo) => {
-    setTodos((prevTodos) => [...prevTodos, {id: Date.now(), ...todo}])
+  const addTodo = (todoText) => {
+    const todo = typeof todoText === 'string' ? { todo: todoText } : todoText;
+    setTodos((prevTodos) => [...prevTodos, { id: Date.now(), completed: false, ...todo }])
   }
 
   const updateTodo = (id, todo) => {
@@ -42,7 +43,7 @@ const App = () => {
               {/*Loop and Add TodoItem here */}
               {todos.map((todo)=>(
                 <div key={todo.id} className='w-full'>
-                   <TodoItem todo={todo} />
+                   <ToDoItem todo={todo} />
                 </div>
               ))}
           </div>

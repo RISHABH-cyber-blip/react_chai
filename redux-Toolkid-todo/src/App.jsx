@@ -1,4 +1,6 @@
 import React from 'react'
+import AddTodo from './components/addToDo'
+import Todos from './components/todo'
 
 const App = () => {
   return (

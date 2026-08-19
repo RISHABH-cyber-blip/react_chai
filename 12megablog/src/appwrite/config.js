@@ -33,6 +33,36 @@ export class Service{
             console.log("error in createPost:", error);
          }
     }
+    async updatePost(slug,{title,content,featuredImage,userId,status}){
+          try {
+            return await this.databases.updateDocument(
+                conf.appWriteDatabaseId,
+                conf.appWriteCollectionId,
+                slug,
+                {
+                    title,
+                    content,
+                    featuredImage,
+                    status
+                }
+            )
+            
+          } catch (error) {
+            console.log("error in updatePost:", error);
+          }
+    }
+
+    async deletePost(slug){
+        try {
+            await this.Databases.deleteDocument(
+                conf.appWriteDatabaseId,
+                conf.appWriteCollectionId,
+                slug
+            )
+        } catch (error) {
+            console.log("error in deletePost:", error);
+        }
+    }
         
 }
 

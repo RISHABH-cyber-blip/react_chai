@@ -1,10 +1,10 @@
 import { useState,useEffect } from "react"
-import { useDispatch } from "@reduxjs/toolkit"
-import "index.css"
+import { useDispatch } from "react-redux"
 import authService from "./appwrite/auth"
 import {login,logout} from "./store/authSlice"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
+import './index.css'
 
 const App = () => {
   const [loading,setLoading] = useState(true)

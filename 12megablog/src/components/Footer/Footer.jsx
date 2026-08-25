@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import Logo from '../Logo'
 
 const Footer = () => {
   return (
@@ -24,6 +26,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <div>{Logo}</div>
 
       <div>
         <h3 className="text-sm font-semibold uppercase tracking-wider text-white">

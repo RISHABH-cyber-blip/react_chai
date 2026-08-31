@@ -3,6 +3,7 @@ import {container} from '../index.js'
 import {Link} from "react-router-dom"
 import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
+import LogOutBtn from './LogOutBtn.jsx'
 
 
 const Header = () => {
@@ -52,6 +53,11 @@ const Header = () => {
                 <Link className="bg-red" to={item.slug}>{item.name}</Link>
               </li>
              ) : null
+            )}
+            {authStatus && (
+              <li>
+                <LogOutBtn />
+              </li>
             )}
           </ul>
         </nav>

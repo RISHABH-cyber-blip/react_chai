@@ -15,6 +15,6 @@ export default function AuthLayout({children,authentication=true}) {
             navigate('/')
         }
         setLoader(false)
-    },[authStatus,navigate,authentication])
+    },[authState,navigate,authentication])
 
 }

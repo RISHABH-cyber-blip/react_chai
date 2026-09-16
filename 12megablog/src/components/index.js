@@ -7,6 +7,7 @@ import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 import Logo from "./Logo.jsx";
 import RTE from "./RTE.JSX";
+import signup from "./signup.jsx";
 
 export { 
     Header,
@@ -17,5 +18,6 @@ export {
     Button,
     Input,
     Logo,
-    RTE
+    RTE,
+    signup
      };

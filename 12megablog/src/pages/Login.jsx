@@ -3,7 +3,9 @@ import {login as LoginComponent} from '../components/index'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <LoginComponent />
+    </div>
   )
 }
 

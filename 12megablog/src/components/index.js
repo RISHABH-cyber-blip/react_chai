@@ -6,7 +6,7 @@ import LogOutBtn from "./Header/LogOutBtn.jsx";
 import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 import Logo from "./Logo.jsx";
-import RTE from "./RTE.JSX";
+import RTE from "./RTE";
 import signup from "./signup.jsx";
 import postCard from "./postCard.jsx";
 import AuthLayout from "./AuthLayout.jsx";

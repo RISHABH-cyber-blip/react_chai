@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {Container,AllPost} from '../components/index'
 import service from '../appwrite/config'
+import PostCard from '../components/postCard'
 
 const Home = () => {
     const [posts,setPosts] = useState([])
@@ -25,7 +26,11 @@ const Home = () => {
         return (
             <div className='w-full h-full flex justify-center items-center'>
                 <Container>
-                    <AllPost posts={posts} />
+                   {posts.map((post) => (
+                        <div className='col-span-1' key={post.$id}>
+                            <PostCard key={post.$id} {...post} />
+                        </div>
+                    ))}
                 </Container>
             </div>
         )

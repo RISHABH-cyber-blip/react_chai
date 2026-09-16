@@ -9,6 +9,7 @@ import Logo from "./Logo.jsx";
 import RTE from "./RTE.JSX";
 import signup from "./signup.jsx";
 import postCard from "./postCard.jsx";
+import AuthLayout from "./AuthLayout.jsx";
 
 export { 
     Header,
@@ -21,5 +22,6 @@ export {
     Logo,
     RTE,
     signup,
-    postCard
+    postCard,
+    AuthLayout
      };

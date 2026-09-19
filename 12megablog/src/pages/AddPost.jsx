@@ -1,12 +1,12 @@
 import React from 'react'
-import {postForm,Container} from '../components/index'
+import {postForm,container} from '../components/index'
 
 const AddPost = () => {
   return (
     <div className='w-full h-full flex justify-center items-center'>
-      <Container>
+      <container>
         <postForm />
-      </Container>
+      </container>
     </div>
   )
 }

@@ -8,8 +8,12 @@ import Input from "./Input.jsx";
 import Logo from "./Logo.jsx";
 import RTE from "./RTE";
 import signup from "./signup.jsx";
-import postCard from "./postCard.jsx";
+import PostCard from "./PostCard.jsx";
 import AuthLayout from "./AuthLayout.jsx";
+import {AddPost,EditPost,AllPost,Home} from "../pages/index.js";
+import postForm from "./post-form/postForm.jsx";
+import Select from "./Select.jsx";
+
 
 export { 
     Header,
@@ -22,6 +26,12 @@ export {
     Logo,
     RTE,
     signup,
-    postCard,
-    AuthLayout
+    PostCard,
+    AuthLayout,
+    AddPost,
+    EditPost,
+    AllPost,
+    Home,
+    postForm,
+    Select
      };

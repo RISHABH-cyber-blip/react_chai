@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
-import {Container,AllPost} from '../components/index'
+import {container,AllPost,PostCard} from '../components/index'
 import service from '../appwrite/config'
-import PostCard from '../components/postCard'
+
 
 const Home = () => {
     const [posts,setPosts] = useState([])
@@ -16,22 +16,22 @@ const Home = () => {
     if(posts.length === 0){
         return (
             <div className='w-full h-full flex justify-center items-center'>
-                <Container>
+                <container>
                     <h1 className='text-2xl font-bold'>No posts found</h1>
-                </Container>
+                </container>
             </div>
         )
     }
     else{
         return (
             <div className='w-full h-full flex justify-center items-center'>
-                <Container>
+                <container>
                    {posts.map((post) => (
                         <div className='col-span-1' key={post.$id}>
                             <PostCard key={post.$id} {...post} />
                         </div>
                     ))}
-                </Container>
+                </container>
             </div>
         )
     }

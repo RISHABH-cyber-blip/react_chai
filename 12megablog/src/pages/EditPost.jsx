@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import {Container,postForm} from '../components/index'
+import {container,postForm} from '../components/index'
 import service from '../appwrite/config'
 import { useNavigate , useParams} from 'react-router-dom'
 
@@ -24,9 +24,9 @@ const EditPost = () => {
 
   return post ? (
     <div className='w-full h-full flex justify-center items-center'>
-      <Container>
+      <container>
         <postForm post={post} />
-      </Container>
+      </container>
     </div>
   ) : null
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import service from '../appwrite/config'
-import {Container,PostCard} from '../components/index'
+import {container,PostCard} from '../components/index'
 
 const AllPost = () => { 
     const [posts,setPosts] = React.useState([])
@@ -14,7 +14,7 @@ const AllPost = () => {
 
   return (
     <div className='w-full h-full flex justify-center items-center'>
-      <Container>
+      <container>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {posts.map((post) => (
                 <div className='col-span-1' key={post.$id}>
@@ -22,7 +22,7 @@ const AllPost = () => {
                 </div>
             ))}
         </div>
-      </Container>
+      </container>
     </div>
   )
 }

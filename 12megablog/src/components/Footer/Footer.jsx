@@ -26,7 +26,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div>{Logo}</div>
+      <div><Logo width="120px" /></div>
 
       <div>
         <h3 className="text-sm font-semibold uppercase tracking-wider text-white">

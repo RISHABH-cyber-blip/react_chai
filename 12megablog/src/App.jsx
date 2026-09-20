@@ -11,7 +11,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    authService.getCurrentUser(dispatch)
+    authService.getCurrentUser()
     .then((userData)=>{
         if(userData) {
            dispatch(login(userData))
@@ -21,18 +21,21 @@ const App = () => {
         }
     })
     .finally(()=>{setLoading(false)})
-  },[])
+  },[dispatch])
 
-  return !loading ? (
+  return loading ? (
     <div className="flex justify-center items-center h-screen text-2xl font-bold">
-       Loading....
-       <Header />
-       <main>
-         {/*<Outlet />*/}
-       </main>
-       <Footer />
+      Loading....
     </div>
-  ): null
+  ) : (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        {/*<Outlet />*/}
+      </main>
+      <Footer />
+    </div>
+  )
   
 }
 

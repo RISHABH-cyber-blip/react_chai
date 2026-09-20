@@ -1,11 +1,9 @@
 import React from 'react'
-import {container} from '../index.js'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useSelector } from 'react-redux'
-import { useNavigate }  from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import LogOutBtn from './LogOutBtn.jsx'
 import Logo from '../Logo'
-
 
 const Header = () => {
   const authStatus=useSelector((state)=>state.auth.status);
@@ -40,11 +38,11 @@ const Header = () => {
   ]
   return (
     <header className="py-3 bg-gray-500">
-      <container>
+      <div className="container mx-auto">
         <nav className="navbar navbar-expand-lg bg-light">
           <div>
             <Link to="/">
-             <Logo className="width-40px"/>
+             <Logo width="40px" />
              </Link>
           </div>
           <ul>
@@ -62,7 +60,7 @@ const Header = () => {
             )}
           </ul>
         </nav>
-      </container>
+      </div>
     </header>
   )
 }

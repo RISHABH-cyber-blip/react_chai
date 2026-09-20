@@ -41,6 +41,13 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
+            if (
+                error?.code === 401 ||
+                error?.type === "general_unauthorized_scope" ||
+                (typeof error?.message === "string" && error.message.includes("missing scopes"))
+            ) {
+                return null;
+            }
             console.log("Error in getCurrentUser:", error);
         }
         return null;

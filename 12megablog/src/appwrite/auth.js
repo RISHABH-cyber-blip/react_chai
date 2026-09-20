@@ -2,15 +2,15 @@ import { Client, Account, ID } from "appwrite";
 import  conf  from "../conf/conf";
 
 export class AuthService {
-    Client=new Client();
+    client=new Client();
     account;
 
     constructor(){
-        this.Client
+        this.client
          .setEndpoint(conf.appWriteUrl)
          .setProject(conf.appWriteProjectId);
         
-         this.account=new Account(this.Client);
+         this.account=new Account(this.client);
 
     }
 
@@ -31,7 +31,7 @@ export class AuthService {
 
     async login({email,password}){
         try {
-            return await this.account.createEmailSession(email,password);
+            return await this.account.createEmailPasswordSession(email,password);
         } catch (error) {
             throw error
         }
@@ -48,7 +48,7 @@ export class AuthService {
 
     async logout(){
         try {
-            await this.account.deleteSessions();
+            await this.account.deleteSessions("current");
         } catch (error) {
             console.log("Error in logout:", error);
         }

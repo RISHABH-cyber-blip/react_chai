@@ -13,6 +13,7 @@ import AuthLayout from "./AuthLayout.jsx";
 import {AddPost,EditPost,AllPost,Home} from "../pages/index.js";
 import postForm from "./post-form/postForm.jsx";
 import Select from "./Select.jsx";
+import {Login,Signup,Post} from "../pages/index.js";
 
 
 export { 
@@ -33,5 +34,8 @@ export {
     AllPost,
     Home,
     postForm,
-    Select
+    Select,
+    Login,
+    Signup,
+    Post
      };

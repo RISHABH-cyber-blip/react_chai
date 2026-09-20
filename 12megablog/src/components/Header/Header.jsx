@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import { useSelector } from 'react-redux'
 import { useNavigate }  from 'react-router-dom'
 import LogOutBtn from './LogOutBtn.jsx'
+import Logo from '../Logo'
 
 
 const Header = () => {

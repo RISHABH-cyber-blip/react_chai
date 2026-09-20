@@ -31,7 +31,7 @@ export class AuthService {
 
     async login({email,password}){
         try {
-            return await this.account.createEmailPasswordSession(email,password);
+            return await this.account.createEmailPasswordSession({ email, password });
         } catch (error) {
             throw error
         }
@@ -48,7 +48,7 @@ export class AuthService {
 
     async logout(){
         try {
-            await this.account.deleteSessions("current");
+            await this.account.deleteSession("current");
         } catch (error) {
             console.log("Error in logout:", error);
         }

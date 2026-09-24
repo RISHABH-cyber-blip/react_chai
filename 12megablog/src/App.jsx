@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react"
 import { useDispatch } from "react-redux"
 import authService from "./appwrite/auth"
+import { pingAppwrite } from "./appwrite/client"
 import {login,logout} from "./store/authSlice"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
@@ -11,6 +12,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    pingAppwrite()
     authService.getCurrentUser()
     .then((userData)=>{
         if(userData) {

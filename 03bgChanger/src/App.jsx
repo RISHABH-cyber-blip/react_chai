@@ -3,6 +3,7 @@ import './index.css'
 
 const App = () => {
   const [bgColor, setBgColor] = React.useState('white')
+  
   const reset = (color) => {
     if (color === 'white') {
       return "white text-white bg-black border border-gray-300 p-2 rounded w-20 h-10 m-4" 
